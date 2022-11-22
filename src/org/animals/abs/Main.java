@@ -16,7 +16,6 @@ public class Main {
 			animali[i].verso();
 			System.out.println("-------------------");
 		}
-	
 	}	
 	
 

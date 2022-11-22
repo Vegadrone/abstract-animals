@@ -1,0 +1,5 @@
+package org.azienda.italy;
+
+public class Main {
+
+}
