@@ -23,10 +23,22 @@ public class Main {
     int avgCost = 0;
     
     for ( int i = 0; i < people.length; i++) {
+    	
+   
+    	
     	System.out.println(people[i]);
     	System.out.println("----------------------------------");
     	
+    	if (people[i].getYearIncome() < minYearIncome) {
+    		minYearIncome = people[i].getYearIncome();
+    		minYearIncomePerson = people[i];
+    	}
+    
     	
+    	if (people[i].getYearIncome() > maxYearIncome) {
+    		maxYearIncome = people[i].getYearIncome();
+    		maxYearIncomePerson = people[i];
+    	}
     	
     	totalCost += people[i].getYearIncome();
     }
@@ -34,8 +46,11 @@ public class Main {
     avgCost = totalCost / people.length;
     
     
-  System.out.println("Ecco chi prende più soldi: " + maxYearIncomePerson +
-		  "\nEcco il più povero: " + minYearIncomePerson + 
+  System.out.println(
+		  "Ecco chi prende più soldi: " + maxYearIncomePerson +
+		  "\n---------------------------------------------------------" +
+		  "\nEcco il più povero: " + minYearIncomePerson +
+		  "\n---------------------------------------------------------" +
 		  "\nCosti totali azienda: " + totalCost + " " + "€" + 
 		  "\nCosti medi azienda: " + avgCost + " " + "€");
     
