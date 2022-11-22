@@ -19,12 +19,13 @@ public class Main {
     Person maxYearIncomePerson = null;
     Person minYearIncomePerson = null;
     
+    Person maxYearIncomeBoss = null;
+    Person minYearIncomeEmployee = null;
+    
     int totalCost = 0;
     int avgCost = 0;
     
     for ( int i = 0; i < people.length; i++) {
-    	
-   
     	
     	System.out.println(people[i]);
     	System.out.println("----------------------------------");
@@ -40,6 +41,11 @@ public class Main {
     		maxYearIncomePerson = people[i];
     	}
     	
+    	if (people[i].getYearIncome() > maxYearIncome && people[i] instanceof Boss) {
+    		maxYearIncome = people[i].getYearIncome();
+    		maxYearIncomeBoss = people[i];
+    	}
+    	
     	totalCost += people[i].getYearIncome();
     }
     
@@ -50,6 +56,10 @@ public class Main {
 		  "Ecco chi prende più soldi: " + maxYearIncomePerson +
 		  "\n---------------------------------------------------------" +
 		  "\nEcco il più povero: " + minYearIncomePerson +
+		  "\n---------------------------------------------------------" +
+		  "\nEcco il Boss più ricco: " + maxYearIncomeBoss +
+		  "\n---------------------------------------------------------" +
+		  "\nEcco l'impiegato più povero: " + minYearIncomeEmployee +
 		  "\n---------------------------------------------------------" +
 		  "\nCosti totali azienda: " + totalCost + " " + "€" + 
 		  "\nCosti medi azienda: " + avgCost + " " + "€");
