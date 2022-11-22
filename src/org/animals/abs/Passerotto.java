@@ -22,9 +22,4 @@ public class Passerotto extends Animals implements Volante{
 	public void vola() {
 		System.out.println("Sto volando!");
 	}
-	@Override
-	public String toString() {
-		return 
-				"Nome: " + super.toString();
-	}
 }

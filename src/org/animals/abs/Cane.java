@@ -14,10 +14,4 @@ public class Cane extends Animals {
 	public void mangia() {
 		System.out.println("croccantini per lo più");
 	}
-	
-	@Override
-	public String toString() {
-		return 
-				"Nome: " + super.toString();
-	}
 }
